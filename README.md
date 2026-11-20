@@ -9,3 +9,5 @@
 
 
 배포 주소: https://factmarketer-web.vercel.app/
+
+직접 사용해 보기: https://factmarketer-web.vercel.app/app.html
