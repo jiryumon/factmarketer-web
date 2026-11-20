@@ -101,7 +101,8 @@ td b{color:var(--navy)}
 
 /* cards images */
 .shots{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.shots img{width:100%;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(15,35,71,.18)}
+.shots img{height:min(38vh,400px);width:auto;max-width:100%;object-fit:contain;border-radius:12px;display:block;margin:0 auto;box-shadow:0 6px 18px rgba(15,35,71,.18)}
+.shots figcaption{text-align:center}
 .shots figure{margin:0}
 .shots figcaption{font-size:.82rem;color:var(--muted);margin-top:6px;font-weight:600}
 .dark .shots figcaption{color:#cfd9ea}
@@ -127,6 +128,7 @@ footer{font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:28px}
   .slide{min-height:auto;padding:84px 16px 48px}
   .g2,.g3,.g4,.vs{grid-template-columns:1fr}
   .shots{grid-template-columns:repeat(2,1fr)}
+  .shots img{height:auto;width:100%}
   .pager,.count,.hint{display:none}
   .top{padding:0 16px} .brand small{display:none}
   .top nav a{padding:8px}
