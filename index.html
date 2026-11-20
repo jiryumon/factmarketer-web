@@ -120,10 +120,31 @@ td b{color:var(--navy)}
 .pager a.on{background:var(--yellow);height:22px;border-radius:6px}
 .count{position:fixed;right:22px;bottom:16px;font-size:.82rem;font-weight:700;color:var(--muted);z-index:15;background:rgba(255,255,255,.85);padding:4px 10px;border-radius:999px}
 .hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:.85rem;color:#b9c6dd}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px}
+.chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;font-size:.92rem;color:#d7e0ee}
+.chips b{color:var(--yellow);font-size:1.05rem;margin-right:4px}
+.cmp{font-size:1rem}
+.cmp td:nth-child(2){color:var(--muted);background:#f8f9fb}
+.cmp td:nth-child(3){font-weight:600}
+.cmp th:nth-child(2){background:#64748b}
+.cmp th:nth-child(3){background:var(--blue)}
+.cmp td:first-child{font-weight:800;color:var(--navy);white-space:nowrap}
+.rv{display:flex;flex-direction:column;gap:8px}
+.rv .row{display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.rv .sent{font-weight:700;color:var(--ink);line-height:1.45}
+.rv .why{font-size:.86rem;color:var(--muted);margin-top:3px;line-height:1.45}
+.pill{display:inline-block;text-align:center;font-weight:800;font-size:.82rem;border-radius:999px;padding:5px 0;width:84px}
+.pill.block{background:#fee2e2;color:var(--bad)} .pill.review{background:#fef3c7;color:#b45309} .pill.pass{background:#dcfce7;color:var(--ok)}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:4px}
+.chain span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-weight:700;color:var(--navy);font-size:.92rem}
+.chain i{color:var(--muted);font-style:normal}
+.chain span.k{background:var(--navy);color:#fff;border-color:var(--navy)}
 footer{font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:28px}
 .dark footer{color:#9fb0cb}
 
 @media (max-width:900px){
+  .rv .row{grid-template-columns:1fr}
+  .cmp td:first-child{white-space:normal}
   html{scroll-snap-type:none}
   .slide{min-height:auto;padding:84px 16px 48px}
   .g2,.g3,.g4,.vs{grid-template-columns:1fr}
@@ -153,7 +174,13 @@ footer{font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:28px}
   <div class="wrap">
     <div class="eyebrow">AI 스마트워크톤 트랙 A · 팀 류지몬</div>
     <h1>고객마다 다르게 설득하고,<br><span class="hl">사실만으로 신뢰를 만든다.</span></h1>
-    <p class="lead">팩트마케터는 티링크의 제품 자료와 설치 현장 사진으로 <b>시장과 구매 결정자에 맞는 홍보 콘텐츠</b>를 만들고, 게시 전에 모든 문장을 <b>원문 근거로 확인</b>하는 B2B 마케팅 AI입니다.</p>
+    <p class="lead">팩트마케터는 티링크의 제품 자료와 설치 현장 사진으로 <b>시장과 구매 결정자에 맞는 홍보 콘텐츠</b>를 만들고, 게시 전에 모든 문장을 <b>원문 근거로 확인</b>하는 B2B 마케팅 AI입니다. <b>AI가 쓴 홍보글을 그대로 올려도 되는지, 올리기 전에 증명합니다.</b></p>
+    <div class="chips">
+      <span><b>281</b>원문과 대조한 사실 카드</span>
+      <span><b>8건</b>자료 간 불일치 자동 탐지</span>
+      <span><b>819 / 819</b>오류 검출 시험</span>
+      <span><b>1.9%</b>오탐률</span>
+    </div>
     <div class="btns">
       <a class="btn" href="#s2">발표 시작 ↓</a>
       <a class="btn ghost" href="app.html">직접 사용해 보기</a>
@@ -303,10 +330,27 @@ footer{font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:28px}
   </div>
 </section>
 
+
+<!-- 차별점: 부탁 vs 강제 -->
+<section class="slide" id="s7b">
+  <div class="wrap">
+    <div class="eyebrow"><b>07</b> 팩트마케터가 다른 점</div>
+    <h2>"지어내지 마"를 AI에게 <span class="muted">부탁</span>하지 않습니다.<br><span class="hl-blue">코드로 판정하고, 사람이 승인합니다.</span></h2>
+    <table class="cmp" style="margin-top:18px">
+      <tr><th style="width:150px"></th><th>일반적인 AI 홍보 생성</th><th>팩트마케터</th></tr>
+      <tr><td>사실 확인</td><td>프롬프트에 "지어내지 마"라고 지시하고, AI의 자기 점검을 믿음</td><td>프로그램이 숫자·단위·조건·고객명을 판정. 같은 원고에는 항상 같은 결과</td></tr>
+      <tr><td>근거</td><td>"AI가 그렇게 답했다" 또는 참고 링크 하나</td><td>문장마다 사실 카드 번호 → 파일·쪽·원문 구절까지 추적</td></tr>
+      <tr><td>자료끼리 다를 때</td><td>둘 중 하나를 그대로 씀</td><td>불일치 8건을 자동으로 찾아, 값을 확정하기 전에는 승인 불가</td></tr>
+      <tr><td>게시 통제</td><td>초안을 만들면 끝</td><td>차단 항목이 있으면 승인 불가, 승인 뒤 고치면 승인 해제, 승인본만 다운로드</td></tr>
+      <tr><td>성능 증명</td><td>측정 없음</td><td>오류 819건 중 819건 검출, 맞는 문장 오탐 1.9%</td></tr>
+    </table>
+  </div>
+</section>
+
 <!-- 8. 솔루션 -->
 <section class="slide dark" id="s8">
   <div class="wrap">
-    <div class="eyebrow"><b>07</b> 우리의 솔루션</div>
+    <div class="eyebrow"><b>08</b> 우리의 솔루션</div>
     <h2>팩트마케터는 마케팅의 세 질문을<br><span class="hl">순서대로 자동화</span>합니다</h2>
     <p class="lead">AI가 분석하고 쓰고, 프로그램이 사실을 판정하고, 사람이 승인합니다.</p>
     <div class="flow">
@@ -327,7 +371,7 @@ footer{font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:28px}
 <!-- 9. 고객 이해 -->
 <section class="slide" id="s9">
   <div class="wrap">
-    <div class="eyebrow"><b>08</b> ① 고객 이해</div>
+    <div class="eyebrow"><b>09</b> ① 고객 이해</div>
     <h2>같은 제품, 다른 고객에게는 다른 이야기</h2>
     <div class="grid g2" style="margin-top:20px;align-items:start">
       <table>
@@ -351,7 +395,7 @@ footer{font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:28px}
 <!-- 10. 가치 제안 · 콘텐츠 -->
 <section class="slide dark" id="s10">
   <div class="wrap">
-    <div class="eyebrow"><b>09</b> ② 차별화된 가치 → 콘텐츠</div>
+    <div class="eyebrow"><b>10</b> ② 차별화된 가치 → 콘텐츠</div>
     <h2>현장 사진 한 장이, 결정자별 카드뉴스가 됩니다</h2>
     <div class="shots" style="margin-top:20px">
       <figure><img src="assets/cards/photo_04-callcenter/exec_1.jpg" alt="콜센터 경영진용 카드뉴스 1장"><figcaption>콜센터 · 경영진 · 문제 제기</figcaption></figure>
@@ -369,34 +413,70 @@ footer{font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:28px}
   </div>
 </section>
 
+
+<!-- 검증 엔진 실제 판정 -->
+<section class="slide" id="s10b">
+  <div class="wrap">
+    <div class="eyebrow"><b>11</b> ③ 신뢰와 증거 — 검증 엔진</div>
+    <h2>AI가 쓴 문장, 게시 전에 이렇게 걸러집니다</h2>
+    <div class="grid g2" style="margin-top:16px;align-items:start;grid-template-columns:1.35fr 1fr">
+      <div class="rv">
+        <div class="row"><span class="pill block">차단</span><div><div class="sent">"녹취 성공률은 99%입니다."</div><div class="why">조건 누락 — 99%는 '인터넷 전화' 기준 <span class="src">홈페이지 설치 사례</span></div></div></div>
+        <div class="row"><span class="pill block">차단</span><div><div class="sent">"도입 기업의 통화 누락률이 87% 줄었습니다."</div><div class="why">근거 없는 수치 — 사실 카드 281개 어디에도 없는 숫자</div></div></div>
+        <div class="row"><span class="pill block">차단</span><div><div class="sent">"전국 200여 개 학교가 도입했습니다."</div><div class="why">충돌 수치 — 자료마다 값이 다름 <span class="src">제안서 11장 ↔ 홈페이지</span></div></div></div>
+        <div class="row"><span class="pill block">차단</span><div><div class="sent">"도입 후 영업기회를 115건 찾아냈습니다."</div><div class="why">예시 값 사용 — 리포트 화면 예시의 값을 성능처럼 씀 <span class="src">제안서 7장</span></div></div></div>
+        <div class="row"><span class="pill block">차단</span><div><div class="sent">"행복복지관 설치 사례입니다."</div><div class="why">고객명 — 설치 사례 고객명은 가린 이름만 사용</div></div></div>
+        <div class="row"><span class="pill review">검토 필요</span><div><div class="sent">"업계 1위 솔루션입니다."</div><div class="why">과장 표현 — 사람이 판단하도록 넘김</div></div></div>
+        <div class="row"><span class="pill pass">통과</span><div><div class="sent">"사무실 전화와 직원 휴대폰 통화를 고객별 하나의 이력으로 모읍니다."</div><div class="why">근거 카드 연결 — "하나의 서버, 고객별 하나의 이력" <span class="src">제안서 3장</span></div></div></div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>승인은 사람이, 통제는 프로그램이</h3>
+          <div class="chain">
+            <span>AI 작성</span><i>→</i><span class="k">코드 판정</span><i>→</i><span>사람 승인</span><i>→</i><span>승인본만 다운로드</span>
+          </div>
+          <p style="margin-top:12px">차단이 하나라도 남으면 승인 버튼이 눌리지 않고, 승인한 뒤 한 글자라도 고치면 승인이 풀려 다시 검수합니다.</p>
+        </div>
+        <div class="card" style="margin-top:14px">
+          <h3>AI에게 과장을 요청해도</h3>
+          <p>"도입 학교 500곳, 업계 1위를 강조해 줘" → <b>22초</b> 만에 원고를 고치되, 자료에 없는 '500곳'과 '업계 1위'는 넣지 않고 이유를 알려 줍니다.</p>
+        </div>
+        <p class="note">위 문장들은 검수 시험에 실제로 넣는 오류 유형입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 11. 신뢰와 증거 -->
 <section class="slide" id="s11">
   <div class="wrap">
-    <div class="eyebrow"><b>10</b> ③ 신뢰와 증거</div>
-    <h2>우리 시스템도 측정한 값으로만 말합니다</h2>
-    <div class="grid g4" style="margin-top:20px">
-      <div class="card stat"><div class="num">281개</div><p>자료 15개 123쪽에서 확인한 사실 (원문 일치 281개)</p></div>
-      <div class="card stat"><div class="num">8건</div><p>자료마다 값이나 조건이 다른 항목을 찾아 표시</p></div>
-      <div class="card stat"><div class="num">555 / 555</div><p>일부러 넣은 오류를 잡은 수 (원고 36편)</p></div>
+    <div class="eyebrow"><b>12</b> ③ 신뢰와 증거 — 측정</div>
+    <h2>검증기도 검증했습니다</h2>
+    <p class="lead">홍보물에 "검증했다"고 쓰는 것으로 끝내지 않고, 검증이 얼마나 정확한지 숫자로 쟀습니다.</p>
+    <div class="grid g4" style="margin-top:8px">
+      <div class="card stat"><div class="num">281 / 281</div><p>AI가 붙인 원문 구절이 그 쪽에 실제로 있는지 코드로 대조해 모두 일치</p></div>
+      <div class="card stat"><div class="num">8건</div><p>자료 간 불일치 자동 탐지. 사람이 놓친 특허 수·통역 신청 조건 차이까지</p></div>
+      <div class="card stat"><div class="num">819 / 819</div><p>오류 유형 14~17가지를 원고 54편에 넣은 검출 시험</p></div>
       <div class="card stat"><div class="num">1.9%</div><p>맞는 문장 258개 중 잘못 잡은 비율</p></div>
-      <div class="card stat"><div class="num">0건</div><p>표현을 바꿔 쓴 수치 67문장 중 잘못 잡은 수</p></div>
-      <div class="card stat"><div class="num">556 / 705</div><p>원고 문장 중 자료 근거가 붙은 문장</p></div>
-      <div class="card stat"><div class="num">13 / 15</div><p>현장 사진을 두 AI 모델이 따로 읽어 설치 형태가 일치한 수</p></div>
-      <div class="card stat"><div class="num">48장 · 36편</div><p>만들어 둔 카드뉴스와 원고 (블로그·도입 사례·영업 이메일)</p></div>
+      <div class="card stat"><div class="num">0 / 67</div><p>'약 3,000석', '3천 석'처럼 표현만 바꾼 수치를 잘못 잡은 수</p></div>
+      <div class="card stat"><div class="num">119 / 119</div><p>원고에 쓴 수치가 그 문장이 인용한 사실 카드 안에 있음</p></div>
+      <div class="card stat"><div class="num">54편 · 0건</div><p>생성한 원고 54편 모두 차단 없이 통과 (카드뉴스 96장 함께 생성)</p></div>
+      <div class="card stat"><div class="num">13 / 15</div><p>현장 사진을 Claude와 Gemini가 따로 읽어 설치 형태가 일치</p></div>
     </div>
-    <p class="note"><b>한계:</b> 검수 통과는 '자료와 어긋나지 않음'을 뜻합니다. 자료 자체가 맞는지는 사람이 확인해야 합니다. 콘텐츠가 실제로 고객의 관심을 얼마나 끄는지는 측정하지 못했습니다.</p>
+    <p class="note">판정은 AI가 아닌 프로그램이 하므로 같은 원고에는 항상 같은 결과가 나오고, 모든 시험은 AI 없이 다시 돌릴 수 있습니다 (<code>check_all.py</code>).</p>
   </div>
 </section>
 
 <!-- 12. 마무리 -->
 <section class="slide dark" id="s12">
   <div class="wrap">
-    <div class="eyebrow"><b>11</b> 정리</div>
+    <div class="eyebrow"><b>13</b> 정리</div>
     <h2>고객을 이해하고, 가치를 말하고,<br><span class="hl">사실로 증명합니다.</span></h2>
+    <p class="lead">생성하는 AI가 아니라, <b>믿고 게시할 수 있는 콘텐츠</b>를 만드는 AI입니다.</p>
     <div class="grid g3" style="margin-top:20px">
       <div class="card"><h3>누구에게</h3><p>마케팅 전담 인력 없이 대표·영업 담당자가 홍보를 겸하는 B2B 설치형 솔루션 기업</p></div>
       <div class="card"><h3>무엇을</h3><p>제품 자료와 현장 사진 → 시장·결정자별 카드뉴스·블로그·도입 사례·영업 이메일</p></div>
-      <div class="card"><h3>어떻게 다르게</h3><p>모든 문장에 출처, 없는 숫자와 빠진 조건은 승인 전에 차단</p></div>
+      <div class="card"><h3>어떻게 다르게</h3><p>모든 문장에 출처, 없는 숫자와 빠진 조건은 승인 전에 코드가 차단. 그 정확도까지 측정</p></div>
     </div>
     <div class="btns" style="margin-top:24px">
       <a class="btn" href="app.html">직접 사용해 보기</a>
