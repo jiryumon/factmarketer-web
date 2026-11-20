@@ -1,53 +1,430 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>팩트마케터 for 티링크</title><meta name="description" content="티링크 전용 마케팅 솔루션 팩트마케터: 현장 사진 한 장과 제품 자료로 고객별 홍보 콘텐츠를 만들고 게시 전에 사실을 확인합니다.">
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>팩트마케터 for 티링크</title>
+<meta name="description" content="티링크의 제품 자료와 설치 현장 사진으로 시장·구매 결정자별 홍보 콘텐츠를 만들고, 모든 문장을 원문 근거로 검증하는 B2B 마케팅 AI">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:"Pretendard","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;background:#F5F7FB;color:#0F172A;line-height:1.7;word-break:keep-all}
-a{color:#1D4ED8;text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-nav{background:#fff;border-bottom:1px solid #E3E9F2;position:sticky;top:0;z-index:5}
-nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
-.logo{font-weight:800;font-size:21px;letter-spacing:-.03em;color:#0B1F3A}.for{background:#1D4ED8;color:#fff;border-radius:99px;padding:2px 11px;font-size:12px;font-weight:700;margin-left:8px}
-nav .sp{margin-left:auto;display:flex;gap:20px;font-weight:600;font-size:15px}
-.hero{background:linear-gradient(135deg,#0B1F3A 0%,#12306B 60%,#1D4ED8 100%);color:#fff;padding:72px 0 64px}
-.hero h1{font-size:46px;line-height:1.25;letter-spacing:-.035em;margin:0 0 16px}.hero h1 em{font-style:normal;color:#FFC400}
-.hero p{font-size:19px;color:#D7E1F5;margin:0 0 26px;max-width:720px}
-.btn{display:inline-block;background:#FFC400;color:#0B1F3A;font-weight:800;border-radius:12px;padding:12px 22px;margin-right:10px}.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}
-.btn:hover{text-decoration:none;filter:brightness(1.05)}
-section{padding:54px 0}h2{font-size:28px;letter-spacing:-.03em;margin:0 0 6px;color:#0B1F3A}.lead{color:#475569;margin:0 0 24px;font-size:16.5px}
-.grid{display:grid;gap:16px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-.card{background:#fff;border:1px solid #E3E9F2;border-radius:16px;padding:22px 24px}.card h3{margin:0 0 6px;font-size:18px;letter-spacing:-.02em;color:#0B1F3A}.card p{margin:0;color:#475569;font-size:15px}
-.step{color:#1D4ED8;font-weight:800;font-size:13px;letter-spacing:.04em}
-.kpi b{display:block;font-size:34px;letter-spacing:-.03em;color:#0B1F3A;line-height:1.2}.kpi span{color:#64748B;font-size:14px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:12px 0}.cards img{width:100%;border-radius:12px;display:block;box-shadow:0 6px 20px rgba(15,23,42,.10)}
-.chip{display:inline-block;border-radius:99px;padding:2px 10px;font-size:12px;font-weight:700;margin-right:6px;white-space:nowrap}
-.ok{background:#DCFCE7;color:#166534}.warn{background:#FEF3C7;color:#92400E}.bad{background:#FEE2E2;color:#991B1B}.mute{background:#E2E8F0;color:#475569}.info{background:#DBEAFE;color:#1E40AF}
-.video{background:#0B1F3A;color:#fff;border-radius:16px;padding:44px;text-align:center}.video a{color:#FFC400;font-weight:800;font-size:20px}
-.note{color:#64748B;font-size:14px}.saved{background:#FFFBEB;border:1px solid #FDE68A;border-radius:12px;padding:10px 16px;color:#92400E;font-size:14.5px;margin:0 0 18px}
-.res{background:#fff;border:1px solid #E3E9F2;border-radius:20px;padding:28px 30px;margin-bottom:26px}.res h2{font-size:24px}.role{margin-top:26px;border-top:1px solid #E3E9F2;padding-top:20px}.role h3{margin:0 0 4px;font-size:19px;color:#0B1F3A}
-details{border:1px solid #E3E9F2;border-radius:12px;margin-top:10px;background:#FBFCFE}summary{cursor:pointer;padding:12px 16px;font-weight:700;color:#0B1F3A}
-.doc{padding:4px 22px 20px;font-size:15.5px;line-height:1.9;color:#1E293B}.doc h4{font-size:19px;margin:6px 0 10px;line-height:1.45}.doc h6{font-size:15.5px;margin:16px 0 4px;color:#0B1F3A}
-.doc .rev{background:#FEF9C3;border-bottom:2px solid #EAB308;border-radius:3px;padding:1px 2px}.doc .fix{color:#64748B;font-size:13px;border-top:1px dashed #CBD5E1;margin-top:12px;padding-top:8px;line-height:1.6}
-.src{background:#F1F5F9;border-radius:10px;padding:8px 12px;margin:6px 22px 0;color:#475569;font-size:13px}.src b{color:#0B1F3A}
-footer{padding:36px 0 60px;color:#64748B;font-size:14px}
-@media(max-width:860px){.g2,.g3,.g4,.cards{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:34px}}
-</style></head><body>
-<nav><div class="wrap"><a href="index.html" class="logo">팩트마케터<span class="for">for 티링크</span></a>
-<div class="sp"><a href="index.html" style="color:#0B1F3A">소개</a><a href="results.html">실행 결과</a><a href="https://github.com/jisung6018-star/smartworkthon5-project">GitHub</a></div></div></nav>
-<div class="hero"><div class="wrap"><h1>현장 사진 한 장으로,<br><em>고객마다 다른</em> 홍보 콘텐츠를</h1>
-<p>티링크의 제품 자료와 설치 현장 사진만 넣으면, AI가 제품과 기술적 차별점을 분석해 시장과 구매 결정자에 맞는 카드뉴스·블로그·도입 사례·영업 이메일을 만들고, 게시 전에 모든 문장을 원문 근거로 확인합니다.</p>
-<a class="btn" href="results.html">실행 결과 보기</a><a class="btn ghost" href="https://github.com/jisung6018-star/smartworkthon5-project">GitHub 저장소</a><div class="cards" style="margin-top:34px"><img src="assets/cards/photo_10-education/exec_1.jpg" alt="카드뉴스 예시"><img src="assets/cards/photo_10-education/exec_2.jpg" alt="카드뉴스 예시"><img src="assets/cards/photo_10-education/exec_3.jpg" alt="카드뉴스 예시"><img src="assets/cards/photo_10-education/exec_4.jpg" alt="카드뉴스 예시"></div></div></div>
-<section><div class="wrap"><h2>풀려는 문제</h2><p class="lead">홍보 글을 AI에게 맡기면 빠르지만, 그대로 게시하기는 어렵습니다.</p>
-<div class="grid g3"><div class="card"><h3>없는 숫자가 섞입니다</h3><p>자료에 없는 수치와 고객 후기가 그럴듯하게 들어갑니다. 확인하는 데 쓰는 시간이 쓰는 시간보다 길어집니다.</p></div>
-<div class="card"><h3>조건이 빠집니다</h3><p>“99%”는 자료에서 ‘인터넷 전화’ 기준입니다. 조건을 빼고 쓰면 과장 광고가 됩니다. 자료끼리 숫자가 다른 경우도 있습니다.</p></div>
-<div class="card"><h3>누구에게나 같은 말을 합니다</h3><p>경영진, 실무 관리자, 전산 담당자는 궁금한 것이 다릅니다. 시장마다 내세울 근거도 다릅니다.</p></div></div></div></section>
-<section style="background:#fff;border-top:1px solid #E3E9F2;border-bottom:1px solid #E3E9F2"><div class="wrap"><h2>이렇게 작동합니다</h2><p class="lead">AI가 쓰고, 프로그램이 사실을 판정하고, 사람이 승인합니다.</p>
-<div class="grid g4"><div class="card"><span class="step">STEP 1</span><h3>사실 정리</h3><p>제안서·매뉴얼·회사소개서·홈페이지에서 사실을 뽑고, 출처 쪽과 원문 구절을 붙입니다. 자료끼리 다른 값도 찾습니다.</p></div>
-<div class="card"><span class="step">STEP 2</span><h3>시장과 결정자 전략</h3><p>콜센터·교육기관·의료·무역물류 중 어디에 근거가 충분한지 비교하고, 결정자마다 다른 설득 전략을 세웁니다. 근거가 없으면 판단을 보류합니다.</p></div>
-<div class="card"><span class="step">STEP 3</span><h3>콘텐츠 4종</h3><p>현장 사진 한 장으로 카드뉴스, 블로그, 도입 사례, 영업 이메일을 만듭니다. 도입 사례가 없는 시장은 기능만 근거로 씁니다.</p></div>
-<div class="card"><span class="step">STEP 4</span><h3>검수와 승인</h3><p>숫자, 조건, 고객명, 티링크 블로그 가이드라인을 프로그램이 검사합니다. 막힌 곳이 있으면 승인할 수 없습니다.</p></div></div></div></section>
-<section><div class="wrap"><h2>측정한 값</h2><p class="lead">이 쪽을 만들 때 프로그램이 다시 잰 값만 적었습니다. 측정하지 않은 개선율은 쓰지 않습니다.</p>
-<div class="grid g4"><div class="card kpi"><b>281개</b><span>자료 15개 123쪽에서 확인한 사실 (원문 일치 281개)</span></div><div class="card kpi"><b>8건</b><span>자료마다 값이나 조건이 다른 항목을 찾아 표시</span></div><div class="card kpi"><b>555 / 555</b><span>일부러 넣은 오류를 잡은 수 (원고 36편)</span></div><div class="card kpi"><b>1.9%</b><span>맞는 문장 258개 중 잘못 잡은 비율</span></div><div class="card kpi"><b>0건</b><span>표현을 바꿔 쓴 수치 67문장 중 잘못 잡은 수</span></div><div class="card kpi"><b>48장 · 36편</b><span>만들어 둔 카드뉴스와 원고 (블로그 · 도입 사례 · 영업 이메일)</span></div><div class="card kpi"><b>556 / 705</b><span>원고 문장 중 자료 근거가 붙은 문장</span></div><div class="card kpi"><b>13 / 15</b><span>현장 사진을 두 AI 모델이 따로 읽어 설치 형태가 일치한 수</span></div></div>
-<p class="note" style="margin-top:16px">한계: 검수 통과는 ‘자료와 어긋나지 않음’을 뜻합니다. 자료 자체가 맞는지는 사람이 확인해야 합니다. 콘텐츠가 실제로 고객의 관심을 얼마나 끄는지는 측정하지 못했습니다.</p></div></section>
-<section style="padding-top:0"><div class="wrap"><div class="video"><span style="font-size:20px;font-weight:800">시연 영상 준비 중</span><p class="note" style="color:#B8C4DD;margin:8px 0 0">업로드가 끝나면 이 자리에 링크가 들어갑니다.</p></div></div></section>
-<footer><div class="wrap">제5회 AI 스마트워크톤(2026-11-20) 트랙 A 출품작 · 팀 류지몬<br>이 사이트의 콘텐츠 예시는 티링크로부터 제품 정보를 제공받아 만든 광고성 콘텐츠의 시연입니다.</div></footer>
-</body></html>
+:root{
+  --navy:#0f2347; --navy2:#16336a; --blue:#2563eb; --sky:#e8effb; --yellow:#fbbf24; --yellow2:#fde68a;
+  --ink:#0f1b2d; --muted:#5b6b82; --line:#dbe3ef; --bg:#f5f7fb; --card:#ffffff;
+  --ok:#0f9d58; --warn:#d97706; --bad:#dc2626;
+}
+*{box-sizing:border-box}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,"Malgun Gothic",system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;word-break:keep-all}
+a{color:inherit}
+
+/* top bar */
+.top{position:fixed;inset:0 0 auto 0;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:20;background:rgba(245,247,251,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);text-decoration:none}
+.brand i{width:14px;height:14px;border-radius:4px;background:var(--yellow);box-shadow:5px 5px 0 var(--navy);display:inline-block;margin-right:4px}
+.brand small{font-weight:600;color:var(--muted)}
+.top nav{display:flex;gap:6px}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:600;color:var(--navy);padding:8px 12px;border-radius:8px}
+.top nav a:hover{background:var(--sky)}
+
+/* slides */
+.slide{scroll-snap-align:start;min-height:100vh;padding:88px 6vw 56px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.slide.dark{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff}
+.slide.dark .muted{color:#b9c6dd}
+.wrap{max-width:1180px;width:100%;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;letter-spacing:.04em;color:var(--blue);text-transform:uppercase;margin-bottom:14px}
+.dark .eyebrow{color:var(--yellow)}
+.eyebrow b{background:var(--navy);color:#fff;border-radius:6px;padding:2px 8px;letter-spacing:0}
+.dark .eyebrow b{background:var(--yellow);color:var(--navy)}
+h1{font-size:clamp(2.3rem,5.4vw,4.4rem);line-height:1.15;margin:0 0 20px;font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,3.6vw,2.9rem);line-height:1.2;margin:0 0 14px;font-weight:800;letter-spacing:-.02em}
+h3{font-size:1.25rem;margin:0 0 8px;font-weight:800}
+.lead{font-size:clamp(1.05rem,1.6vw,1.3rem);line-height:1.65;color:var(--muted);max-width:820px;margin:0 0 26px}
+.dark .lead{color:#cfd9ea}
+.hl{color:var(--yellow)}
+.hl-blue{color:var(--blue)}
+.muted{color:var(--muted)}
+.src{display:inline-block;font-size:.74rem;font-weight:600;color:var(--muted);background:#eef2f8;border-radius:999px;padding:3px 9px;margin-top:8px}
+.dark .src{background:rgba(255,255,255,.1);color:#c3cfe3}
+
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 1px 2px rgba(15,35,71,.04)}
+.dark .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14)}
+.card p{margin:6px 0 0;line-height:1.6;color:var(--muted)}
+.dark .card p{color:#cfd9ea}
+.card ul{margin:10px 0 0;padding-left:18px;line-height:1.75;color:var(--muted)}
+.dark .card ul{color:#d7e0ee}
+.num{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.1}
+.dark .num{color:var(--yellow)}
+.badge{display:inline-block;font-size:.78rem;font-weight:700;border-radius:999px;padding:4px 10px;background:var(--sky);color:var(--navy)}
+.badge.y{background:var(--yellow);color:var(--navy)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;padding:13px 20px;border-radius:12px;background:var(--yellow);color:var(--navy)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.btn.navy{background:var(--navy);color:#fff}
+
+/* principle cards */
+.pr{position:relative;padding-top:30px}
+.pr .k{position:absolute;top:-16px;left:22px;width:40px;height:40px;border-radius:12px;background:var(--navy);color:var(--yellow);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.pr .en{font-size:.8rem;font-weight:700;color:var(--blue);letter-spacing:.03em}
+.pr .q{font-weight:700;color:var(--ink);margin:6px 0 4px;line-height:1.5}
+
+/* strengths */
+.st .ic{font-size:1.6rem;width:48px;height:48px;border-radius:14px;background:var(--sky);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.quote{margin-top:22px;padding:18px 22px;border-left:5px solid var(--yellow);background:#fff;border-radius:0 14px 14px 0;font-size:clamp(1.15rem,2vw,1.5rem);font-weight:800;color:var(--navy)}
+
+/* bars */
+.bars{display:flex;flex-direction:column;gap:14px}
+.bar{display:grid;grid-template-columns:96px 1fr 64px;align-items:center;gap:12px;font-weight:700}
+.bar .t{height:30px;background:#eef2f8;border-radius:8px;overflow:hidden}
+.bar .f{height:100%;background:linear-gradient(90deg,var(--navy),var(--blue));border-radius:8px}
+.bar .p{text-align:right;color:var(--navy)}
+.scale li{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);list-style:none}
+.scale{padding:0;margin:8px 0 0}
+.scale b{color:var(--navy)}
+
+/* tables */
+table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;font-size:.98rem}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+th{background:var(--navy);color:#fff;font-weight:700;font-size:.9rem}
+tr:last-child td{border-bottom:none}
+td b{color:var(--navy)}
+.lvl{font-weight:800;white-space:nowrap}
+.lvl.ok{color:var(--ok)} .lvl.mid{color:var(--warn)} .lvl.no{color:var(--bad)}
+
+/* flow */
+.flow{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin-top:6px}
+.flow .s{flex:1 1 150px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;font-weight:700;color:var(--navy);position:relative}
+.flow .s small{display:block;font-weight:500;color:var(--muted);margin-top:4px;line-height:1.45}
+.flow .s.y{background:var(--navy);color:#fff;border-color:var(--navy)} .flow .s.y small{color:#cfd9ea}
+.map td:first-child{white-space:nowrap}
+
+/* cards images */
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.shots img{width:100%;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(15,35,71,.18)}
+.shots figure{margin:0}
+.shots figcaption{font-size:.82rem;color:var(--muted);margin-top:6px;font-weight:600}
+.dark .shots figcaption{color:#cfd9ea}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.vs img{width:100%;max-width:340px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.35);display:block}
+
+/* stats */
+.stat .num{margin-bottom:6px}
+.stat p{font-size:.95rem}
+.note{margin-top:18px;font-size:.92rem;color:var(--muted);line-height:1.6}
+
+/* slide counter */
+.pager{position:fixed;right:18px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:9px;z-index:15}
+.pager a{width:9px;height:9px;border-radius:50%;background:#c5d0e0;display:block}
+.pager a.on{background:var(--yellow);height:22px;border-radius:6px}
+.count{position:fixed;right:22px;bottom:16px;font-size:.82rem;font-weight:700;color:var(--muted);z-index:15;background:rgba(255,255,255,.85);padding:4px 10px;border-radius:999px}
+.hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:.85rem;color:#b9c6dd}
+footer{font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:28px}
+.dark footer{color:#9fb0cb}
+
+@media (max-width:900px){
+  html{scroll-snap-type:none}
+  .slide{min-height:auto;padding:84px 16px 48px}
+  .g2,.g3,.g4,.vs{grid-template-columns:1fr}
+  .shots{grid-template-columns:repeat(2,1fr)}
+  .pager,.count,.hint{display:none}
+  .top{padding:0 16px} .brand small{display:none}
+  .top nav a{padding:8px}
+  table{font-size:.9rem} th,td{padding:10px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="index.html"><i></i>팩트마케터 <small>for 티링크</small></a>
+  <nav>
+    <a href="index.html">소개</a>
+    <a href="results.html">실행 결과</a>
+    <a href="https://github.com/jisung6018-star/smartworkthon5-project" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<!-- 1. 표지 -->
+<section class="slide dark" id="s1">
+  <div class="wrap">
+    <div class="eyebrow">AI 스마트워크톤 트랙 A · 팀 류지몬</div>
+    <h1>고객마다 다르게 설득하고,<br><span class="hl">사실만으로 신뢰를 만든다.</span></h1>
+    <p class="lead">팩트마케터는 티링크의 제품 자료와 설치 현장 사진으로 <b>시장과 구매 결정자에 맞는 홍보 콘텐츠</b>를 만들고, 게시 전에 모든 문장을 <b>원문 근거로 확인</b>하는 B2B 마케팅 AI입니다.</p>
+    <div class="btns">
+      <a class="btn" href="#s2">발표 시작 ↓</a>
+      <a class="btn ghost" href="results.html">실행 결과 보기</a>
+    </div>
+  </div>
+  <div class="hint">↓ 방향키 · 스페이스로 넘기기</div>
+</section>
+
+<!-- 2. 마케팅의 핵심 3가지 -->
+<section class="slide" id="s2">
+  <div class="wrap">
+    <div class="eyebrow"><b>01</b> 마케팅의 핵심</div>
+    <h2>좋은 B2B 마케팅은 세 가지 질문에 답합니다</h2>
+    <p class="lead">멋진 문구보다 먼저, 누가 왜 사는지 알고 · 왜 우리인지 말하고 · 그것을 증명해야 합니다.</p>
+    <div class="grid g3" style="margin-top:26px">
+      <div class="card pr">
+        <div class="k">1</div>
+        <div class="en">CUSTOMER UNDERSTANDING</div>
+        <h3>고객 이해</h3>
+        <div class="q">누가, 어떤 문제 때문에, 왜 지금 구매하는가?</div>
+        <ul><li>고객의 문제와 구매 동기 파악</li><li>STP · ICP · JTBD 분석</li><li>고객이 진짜 원하는 가치 발견</li></ul>
+      </div>
+      <div class="card pr">
+        <div class="k">2</div>
+        <div class="en">VALUE PROPOSITION</div>
+        <h3>차별화된 가치 제안</h3>
+        <div class="q">왜 경쟁사가 아니라 우리 제품을 선택해야 하는가?</div>
+        <ul><li>제품의 핵심 강점과 USP 분석</li><li>기술적 특징을 고객이 체감하는 가치로 전환</li><li>경쟁 대안과 구별되는 구매 이유 제시</li></ul>
+      </div>
+      <div class="card pr">
+        <div class="k">3</div>
+        <div class="en">TRUST &amp; PROOF</div>
+        <h3>신뢰와 증거</h3>
+        <div class="q">고객은 무엇을 근거로 우리 제품을 믿는가?</div>
+        <ul><li>실제 설치·도입 사례</li><li>객관적인 성능 수치</li><li>기술적 근거와 고객 경험</li><li>과장 없는 검증된 정보</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 티링크는 어떤 회사 -->
+<section class="slide" id="s3">
+  <div class="wrap">
+    <div class="eyebrow"><b>02</b> 티링크 이해하기</div>
+    <h2>통신을 현장에 설치하는 회사가,<br>통화를 경영 정보로 바꿉니다</h2>
+    <div class="grid g2" style="margin-top:22px">
+      <div class="card">
+        <span class="badge">회사</span>
+        <h3 style="margin-top:12px">㈜티링크앤주인닷컴</h3>
+        <p>기업 회선·인터넷전화·콜센터 구축과 유지보수를 하는 정보통신 기업이면서, 녹취·CRM 솔루션을 직접 개발합니다.</p>
+        <ul><li>2006년 설립 · 부설연구소 · 특허 등록</li><li>메인비즈 · 이노비즈 · 벤처기업 인증</li><li>무료 상담 → 현장 맞춤 설치·연동 → 월 구독</li></ul>
+        <span class="src">출처: 회사소개서 3~5쪽 · 제안서 10장</span>
+      </div>
+      <div class="card">
+        <span class="badge y">제품</span>
+        <h3 style="margin-top:12px">티링크 비즈레코딩</h3>
+        <p>통화를 녹음하는 데서 끝나지 않고, 기록을 보고서로 만듭니다.</p>
+        <ul><li><b>녹취 서버</b> — 인터넷전화·휴대폰·PC폰 통화를 한 곳에</li><li><b>티링크모바일 · PC폰</b> — 외근·재택 통화와 문자, 대면 녹취</li><li><b>티링크노트 CRM</b> — 고객별 상담·통화·문자 이력</li><li><b>AI 종합리포트</b> — 경영·상담원·인사·교육 보고서</li></ul>
+        <span class="src">출처: 제안서 · CRM·모바일·PC폰 매뉴얼</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 티링크의 강점 -->
+<section class="slide" id="s4">
+  <div class="wrap">
+    <div class="eyebrow"><b>03</b> 티링크의 강점</div>
+    <h2>기술적 특징을 고객이 체감하는 가치로</h2>
+    <div class="grid g4" style="margin-top:22px">
+      <div class="card st"><div class="ic">☎️</div><h3>쓰던 전화 그대로</h3><p>기존 회선과 전화기를 바꾸지 않고, 패킷 미러링 스위치로 통화를 복제해 녹취 서버에 저장합니다.</p><span class="src">홈페이지 · AI 녹취</span></div>
+      <div class="card st"><div class="ic">🔗</div><h3>흩어진 통화를 하나로</h3><p>사무실 인터넷전화·직원 휴대폰·PC폰 통화가 한 서버, 고객별 하나의 이력으로 모입니다. LG·SK·KT 회선 호환.</p><span class="src">제안서 3장</span></div>
+      <div class="card st"><div class="ic">📊</div><h3>통화가 보고서로</h3><p>CEO 5분 브리핑, 같은 이슈 3회 반복 시 긴급 경보, 상담원 6대 역량 평가. 모든 항목에 통화 원문 근거.</p><span class="src">제안서 5~8장</span></div>
+      <div class="card st"><div class="ic">🛠️</div><h3>현장에 맞춘 설치</h3><p>스탠드형 · 렉거치형 · 미러링 스위치 허브. 좁은 단자함엔 벽걸이로. 녹취 파일은 AES256 암호화.</p><span class="src">홈페이지 · 설치 사례 · AI 녹취</span></div>
+    </div>
+    <div class="quote">“쓰던 전화는 그대로, 흩어진 통화 기록은 하나로.”</div>
+  </div>
+</section>
+
+<!-- 5. 실적 -->
+<section class="slide dark" id="s5">
+  <div class="wrap">
+    <div class="eyebrow"><b>04</b> 검증된 실적</div>
+    <h2>숫자는 출처와 조건까지 함께 씁니다</h2>
+    <div class="grid g4" style="margin-top:22px">
+      <div class="card stat"><div class="num">1,000+</div><p>도입 기업</p><span class="src">제안서 3·11장</span></div>
+      <div class="card stat"><div class="num">3,000석</div><p>최대 구축 규모 (한국전력 고객센터)</p><span class="src">홈페이지 · 회사소개서 5쪽</span></div>
+      <div class="card stat"><div class="num">99%</div><p><b>인터넷 전화</b> 녹취 성공률<br><small class="muted">조건을 빼면 과장이 됩니다</small></p><span class="src">홈페이지 · 설치 사례</span></div>
+      <div class="card stat"><div class="num">150곳+</div><p>녹취서버를 도입한 전국 학교<br><small class="muted">제안서는 "200여 개" → 자료 간 차이로 표시</small></p><span class="src">홈페이지 ↔ 제안서 11장</span></div>
+    </div>
+    <div class="grid g4" style="margin-top:14px">
+      <div class="card"><b>세종텔레콤</b><p>녹취 1,000 USER</p><span class="src">제안서 11장</span></div>
+      <div class="card"><b>IVY 김영학원</b><p>고객센터 녹취서버 700석</p><span class="src">회사소개서 5쪽</span></div>
+      <div class="card"><b>여행박사</b><p>300석</p><span class="src">제안서 11장</span></div>
+      <div class="card"><b>성형외과·피부과</b><p>100여 곳 녹취시스템 운영</p><span class="src">회사소개서 4쪽</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 업종별 경험 -->
+<section class="slide" id="s6">
+  <div class="wrap">
+    <div class="eyebrow"><b>05</b> 업종별 경험</div>
+    <h2>특정 업종이 아니라, 다양한 현장에 설치해 왔습니다</h2>
+    <div class="grid g2" style="margin-top:22px;align-items:start">
+      <div class="card">
+        <h3>설치 사례 업종 비율</h3>
+        <p style="margin-bottom:18px">티링크 홈페이지 설치 사례 갤러리 12건 기준</p>
+        <div class="bars">
+          <div class="bar"><span>의료</span><div class="t"><div class="f" style="width:100%"></div></div><span class="p">25%</span></div>
+          <div class="bar"><span>기업</span><div class="t"><div class="f" style="width:100%"></div></div><span class="p">25%</span></div>
+          <div class="bar"><span>공공·복지</span><div class="t"><div class="f" style="width:67%"></div></div><span class="p">17%</span></div>
+          <div class="bar"><span>금융</span><div class="t"><div class="f" style="width:67%"></div></div><span class="p">17%</span></div>
+          <div class="bar"><span>교육</span><div class="t"><div class="f" style="width:67%"></div></div><span class="p">17%</span></div>
+        </div>
+        <span class="src">홈페이지 설치 사례 (의료 3 · 기업 3 · 공공·복지 2 · 금융 2 · 교육 2) · 반올림</span>
+        <p class="note">갤러리에 실린 사례의 비율이며, 전체 고객 비율은 자료에 없습니다.</p>
+      </div>
+      <div class="card">
+        <h3>업종별 대표 구축 규모</h3>
+        <ul class="scale">
+          <li><span>공공 · 한국전력 고객센터</span><b>3,000석</b></li>
+          <li><span>통신 · 세종텔레콤</span><b>1,000 USER</b></li>
+          <li><span>교육 · IVY 김영학원</span><b>700석</b></li>
+          <li><span>여행 · 여행박사</span><b>300석</b></li>
+          <li><span>교육 · 전국 학교</span><b>150곳+</b></li>
+          <li><span>의료 · 성형외과·피부과</span><b>100여 곳</b></li>
+        </ul>
+        <span class="src">제안서 11장 · 회사소개서 4~5쪽 · 홈페이지</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. 문제 -->
+<section class="slide" id="s7">
+  <div class="wrap">
+    <div class="eyebrow"><b>06</b> 그런데, 왜 홍보가 어려운가</div>
+    <h2>강점은 충분한데, 콘텐츠로 옮기기가 어렵습니다</h2>
+    <div class="grid g4" style="margin-top:22px">
+      <div class="card"><h3>자료가 흩어져 있다</h3><p>제안서 11장, 매뉴얼 3종(43쪽·29장·16쪽), 회사소개서 14쪽, 블로그 가이드라인, 홈페이지.</p></div>
+      <div class="card"><h3>사진이 설비 사진이다</h3><p>설치 현장 사진은 단자함·서버 랙·케이블. 그대로는 고객의 관심을 끌기 어렵습니다.</p></div>
+      <div class="card"><h3>결정자가 여럿이다</h3><p>경영진, 실무 관리자, 전산 담당자의 관심이 다른데 홍보물은 하나입니다.</p></div>
+      <div class="card"><h3>AI는 지어낸다</h3><p>없는 수치와 후기가 섞이고, "99%"의 조건이 빠집니다. 자료끼리 값이 다른 곳도 있습니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. 솔루션 -->
+<section class="slide dark" id="s8">
+  <div class="wrap">
+    <div class="eyebrow"><b>07</b> 우리의 솔루션</div>
+    <h2>팩트마케터는 마케팅의 세 질문을<br><span class="hl">순서대로 자동화</span>합니다</h2>
+    <p class="lead">AI가 분석하고 쓰고, 프로그램이 사실을 판정하고, 사람이 승인합니다.</p>
+    <div class="flow">
+      <div class="s">자료 · 현장 사진<small>제안서·매뉴얼·홈페이지·설치 사진</small></div>
+      <div class="s y">① 고객 이해<small>시장 4종 × 결정자 3역할 전략</small></div>
+      <div class="s y">② 가치 제안<small>기술 특징 → 고객 가치, 시장별 근거</small></div>
+      <div class="s y">③ 신뢰와 증거<small>사실 카드 · 코드 검수 · 사람 승인</small></div>
+      <div class="s">콘텐츠 4종<small>카드뉴스·블로그·도입 사례·영업 이메일</small></div>
+    </div>
+    <div class="grid g3" style="margin-top:18px">
+      <div class="card"><h3>① 고객 이해</h3><p>STP·ICP·JTBD로 콜센터·교육기관·의료·무역물류를 비교하고, 결정자마다 문제·구매 계기·우려를 정리합니다. 근거가 없으면 판단을 보류합니다.</p></div>
+      <div class="card"><h3>② 차별화된 가치 제안</h3><p>"패킷 미러링" 같은 기술 특징을 "쓰던 전화 그대로" 같은 고객 가치로 바꿉니다. 경쟁사 자료가 없으면 독점 우위를 주장하지 않습니다.</p></div>
+      <div class="card"><h3>③ 신뢰와 증거</h3><p>모든 사실에 출처 쪽과 원문 구절을 붙이고, 숫자·조건·고객명을 코드로 검사합니다. 막힌 곳이 있으면 승인할 수 없습니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. 고객 이해 -->
+<section class="slide" id="s9">
+  <div class="wrap">
+    <div class="eyebrow"><b>08</b> ① 고객 이해</div>
+    <h2>같은 제품, 다른 고객에게는 다른 이야기</h2>
+    <div class="grid g2" style="margin-top:20px;align-items:start">
+      <table>
+        <tr><th>구매 결정자</th><th>관심사</th><th>티링크의 답</th></tr>
+        <tr><td><b>경영진</b></td><td>위험 관리, 보고</td><td>CEO 5분 브리핑, 3회 반복 이슈 긴급 경보 <span class="src">제안서 6장</span></td></tr>
+        <tr><td><b>실무 관리자</b></td><td>직원별 현황, 업무 누락</td><td>직원별 통화량·평균 통화시간·미결 상담 관리 <span class="src">가이드라인 미션 4</span></td></tr>
+        <tr><td><b>전산 담당자</b></td><td>설치 공간, 호환, 보안</td><td>회선·전화기 교체 없음, 설치 3종, AES256 <span class="src">홈페이지</span></td></tr>
+      </table>
+      <table>
+        <tr><th>시장</th><th>근거</th><th>콘텐츠 톤</th></tr>
+        <tr><td><b>콜센터</b></td><td class="lvl ok">충분</td><td>대규모 구축 실적과 AI 리포트 중심</td></tr>
+        <tr><td><b>교육기관</b></td><td class="lvl ok">충분</td><td>학교 도입 실적 중심 (학교 수는 검토 표시)</td></tr>
+        <tr><td><b>의료</b></td><td class="lvl mid">제한적</td><td>운영 사례와 설치 사진까지. 규정 준수 주장 차단</td></tr>
+        <tr><td><b>무역·물류</b></td><td class="lvl no">사례 없음</td><td>"신규 시장 제안" 표시, 통역 기능과 그 조건만</td></tr>
+      </table>
+    </div>
+    <p class="note">근거가 부족한 시장은 지어내지 않고, 시스템이 스스로 톤을 바꿉니다.</p>
+  </div>
+</section>
+
+<!-- 10. 가치 제안 · 콘텐츠 -->
+<section class="slide dark" id="s10">
+  <div class="wrap">
+    <div class="eyebrow"><b>09</b> ② 차별화된 가치 → 콘텐츠</div>
+    <h2>현장 사진 한 장이, 결정자별 카드뉴스가 됩니다</h2>
+    <div class="shots" style="margin-top:20px">
+      <figure><img src="assets/cards/photo_04-callcenter/exec_1.jpg" alt="콜센터 경영진용 카드뉴스 1장"><figcaption>콜센터 · 경영진 · 문제 제기</figcaption></figure>
+      <figure><img src="assets/cards/photo_04-callcenter/manager_1.jpg" alt="콜센터 실무 관리자용 카드뉴스 1장"><figcaption>콜센터 · 실무 관리자</figcaption></figure>
+      <figure><img src="assets/cards/photo_04-callcenter/it_1.jpg" alt="콜센터 전산 담당자용 카드뉴스 1장"><figcaption>콜센터 · 전산 담당자</figcaption></figure>
+      <figure><img src="assets/cards/photo_06-trade/exec_3.jpg" alt="무역·물류 경영진용 카드뉴스 3장, 신규 시장 제안 표시"><figcaption>무역·물류 · "신규 시장 제안" 표시</figcaption></figure>
+    </div>
+    <div class="grid g4" style="margin-top:18px">
+      <div class="card"><b>카드뉴스 4장</b><p>문제 → 해결 → 근거 → 도입 문의</p></div>
+      <div class="card"><b>네이버 블로그</b><p>티링크 가이드라인 필수 키워드·미션 자동 검사</p></div>
+      <div class="card"><b>도입 사례</b><p>확인된 구축 정보만. 없는 성과는 쓰지 않음</p></div>
+      <div class="card"><b>영업 이메일</b><p>시장·결정자별 제목과 본문, 광고 표기 검사</p></div>
+    </div>
+    <div class="btns" style="margin-top:18px"><a class="btn" href="results.html">시장별 결과 전체 보기 →</a></div>
+  </div>
+</section>
+
+<!-- 11. 신뢰와 증거 -->
+<section class="slide" id="s11">
+  <div class="wrap">
+    <div class="eyebrow"><b>10</b> ③ 신뢰와 증거</div>
+    <h2>우리 시스템도 측정한 값으로만 말합니다</h2>
+    <div class="grid g4" style="margin-top:20px">
+      <div class="card stat"><div class="num">281개</div><p>자료 15개 123쪽에서 확인한 사실 (원문 일치 281개)</p></div>
+      <div class="card stat"><div class="num">8건</div><p>자료마다 값이나 조건이 다른 항목을 찾아 표시</p></div>
+      <div class="card stat"><div class="num">555 / 555</div><p>일부러 넣은 오류를 잡은 수 (원고 36편)</p></div>
+      <div class="card stat"><div class="num">1.9%</div><p>맞는 문장 258개 중 잘못 잡은 비율</p></div>
+      <div class="card stat"><div class="num">0건</div><p>표현을 바꿔 쓴 수치 67문장 중 잘못 잡은 수</p></div>
+      <div class="card stat"><div class="num">556 / 705</div><p>원고 문장 중 자료 근거가 붙은 문장</p></div>
+      <div class="card stat"><div class="num">13 / 15</div><p>현장 사진을 두 AI 모델이 따로 읽어 설치 형태가 일치한 수</p></div>
+      <div class="card stat"><div class="num">48장 · 36편</div><p>만들어 둔 카드뉴스와 원고 (블로그·도입 사례·영업 이메일)</p></div>
+    </div>
+    <p class="note"><b>한계:</b> 검수 통과는 '자료와 어긋나지 않음'을 뜻합니다. 자료 자체가 맞는지는 사람이 확인해야 합니다. 콘텐츠가 실제로 고객의 관심을 얼마나 끄는지는 측정하지 못했습니다.</p>
+  </div>
+</section>
+
+<!-- 12. 마무리 -->
+<section class="slide dark" id="s12">
+  <div class="wrap">
+    <div class="eyebrow"><b>11</b> 정리</div>
+    <h2>고객을 이해하고, 가치를 말하고,<br><span class="hl">사실로 증명합니다.</span></h2>
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card"><h3>누구에게</h3><p>마케팅 전담 인력 없이 대표·영업 담당자가 홍보를 겸하는 B2B 설치형 솔루션 기업</p></div>
+      <div class="card"><h3>무엇을</h3><p>제품 자료와 현장 사진 → 시장·결정자별 카드뉴스·블로그·도입 사례·영업 이메일</p></div>
+      <div class="card"><h3>어떻게 다르게</h3><p>모든 문장에 출처, 없는 숫자와 빠진 조건은 승인 전에 차단</p></div>
+    </div>
+    <div class="btns" style="margin-top:24px">
+      <a class="btn" href="results.html">실행 결과 보기</a>
+      <a class="btn ghost" href="https://github.com/jisung6018-star/smartworkthon5-project" target="_blank" rel="noopener">GitHub 저장소</a>
+    </div>
+    <footer>제5회 AI 스마트워크톤(2026-11-20) 트랙 A 출품작 · 팀 류지몬<br>이 사이트의 콘텐츠 예시는 티링크로부터 제품 정보를 제공받아 만든 광고성 콘텐츠의 시연입니다. 수치 옆의 출처는 티링크 제공 자료와 티링크 홈페이지입니다.</footer>
+  </div>
+</section>
+
+<nav class="pager" aria-label="슬라이드"></nav>
+<div class="count" aria-live="polite"></div>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var pager=document.querySelector('.pager'), count=document.querySelector('.count');
+  slides.forEach(function(s,i){var a=document.createElement('a');a.href='#'+s.id;a.setAttribute('aria-label',(i+1)+'번 슬라이드');pager.appendChild(a);});
+  var dots=[].slice.call(pager.children), cur=0;
+  function mark(i){cur=i;dots.forEach(function(d,j){d.classList.toggle('on',j===i)});count.textContent=(i+1)+' / '+slides.length;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>0.55)mark(slides.indexOf(e.target));});},{threshold:[0.55]});
+  slides.forEach(function(s){io.observe(s)});
+  mark(0);
+  function go(i){i=Math.max(0,Math.min(slides.length-1,i));slides[i].scrollIntoView({behavior:'smooth'});}
+  document.addEventListener('keydown',function(e){
+    if(e.target.closest&&e.target.closest('input,textarea'))return;
+    if(['ArrowDown','PageDown',' ','ArrowRight'].indexOf(e.key)>-1){e.preventDefault();go(cur+1);}
+    else if(['ArrowUp','PageUp','ArrowLeft'].indexOf(e.key)>-1){e.preventDefault();go(cur-1);}
+    else if(e.key==='Home'){e.preventDefault();go(0);}
+    else if(e.key==='End'){e.preventDefault();go(slides.length-1);}
+    else if(e.key==='f'||e.key==='F'){if(!document.fullscreenElement&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen();else if(document.exitFullscreen)document.exitFullscreen();}
+  });
+})();
+</script>
+</body>
+</html>
